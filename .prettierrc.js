@@ -1,4 +1,3 @@
-// 具体配置可以参考 https://prettier.io/docs/en/options.html
 module.exports = {
     printWidth: 100,
     tabWidth: 2,
@@ -16,5 +15,5 @@ module.exports = {
     requirePragma: false,
     proseWrap: 'never',
     htmlWhitespaceSensitivity: 'strict',
-    endOfLine: 'lf'
-};
+    endOfLine: 'crlf'
+}
