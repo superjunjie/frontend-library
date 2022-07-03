@@ -1,25 +1,36 @@
+<script setup>
+import { useMouse } from '../utils/mouse'
+import { useTodos } from './useTodos'
+const { x, y } = useMouse()
+
+const { title, todos, addTodo, clear, active, all, allDone, showModal, removeTodo } = useTodos()
+</script>
 
 <template>
   <div class="container">
-    <input type="text" v-model="title" @keydown.enter="addTodo" placeholder="请输入你的计划" />
-    <button v-if="active < all" @click="clear">清理</button>
+    <input v-model="title" type="text" placeholder="请输入你的计划" @keydown.enter="addTodo">
+    <button v-if="active < all" @click="clear">
+      清理
+    </button>
     <ul v-if="todos.length">
       <transition-group name="flip-list" tag="ul">
         <li v-for="(todo, index) in todos" :key="index">
-          <input type="checkbox" v-model="todo.done" />
+          <input v-model="todo.done" type="checkbox">
           <span :class="{ done: todo.done }"> {{ todo.title }}</span>
           <span class="remove-btn" @click="removeTodo($event, index)"> ❌ </span>
         </li>
       </transition-group>
     </ul>
-    <div v-else>暂无数据</div>
+    <div v-else>
+      暂无数据
+    </div>
     <div>
-      <span>全选</span><input type="checkbox" v-model="allDone" />
+      <span>全选</span><input v-model="allDone" type="checkbox">
       <span>{{ active }} / {{ all }}</span>
     </div>
   </div>
   <transition name="modal">
-    <div class="info-wrapper" v-if="showModal">
+    <div v-if="showModal" class="info-wrapper">
       <div class="info">
         你输入了个寂寞！
       </div>
@@ -27,13 +38,6 @@
   </transition>
 </template>
 
-<script setup>
-import { useTodos } from './useTodos'
-import { useMouse } from '../utils/mouse'
-const { x, y } = useMouse()
-
-const { title, todos, addTodo, clear, active, all, allDone, showModal, removeTodo } = useTodos()
-</script>
 <style scoped>
 .container {
   margin: 0 aoto;

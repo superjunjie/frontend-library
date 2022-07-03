@@ -1,13 +1,13 @@
 {
   "name": "frontend-library",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix --ext .ts,.tsx"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "typescript": "^4.7.4",
@@ -16,12 +16,9 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
+    "@antfu/eslint-config": "^0.25.1",
     "@vitejs/plugin-vue": "^2.3.3",
-    "eslint": "^8.18.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint": "^8.17.0",
     "eslint-plugin-vue": "^9.1.1",
     "prettier": "^2.7.1",
     "vite": "^2.9.9"
