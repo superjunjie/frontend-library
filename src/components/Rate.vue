@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { computed, defineProps } from 'vue'
-const props = defineProps({
+const props: any = defineProps({
   value: Number,
   theme: { type: String, default: 'green' },
 })
 const rate = computed(() => '★★★★★☆☆☆☆☆'.slice(5 - props.value, 10 - props.value))
-const themeObj = {
+const themeObj: any = {
   black: '#00',
   white: '#fff',
   red: '#f5222d',
