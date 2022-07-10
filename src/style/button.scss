@@ -1,0 +1,193 @@
+@import 'mixins/mixins';
+@import 'common/theme.scss';
+@import 'common/variables.scss';
+
+.s-btn {
+  font-weight: 400;
+  color: $font-500;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0 16px;
+  font-size: 1rem;
+  height: 40px;
+  // line-height: 40px;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  min-width: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &.s-btn-disabled,
+  &.s-btn-disabled:hover,
+  &.s-btn-disabled:focus,
+  &.s-btn-disabled:active {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
+  @each $size,
+  $value in $sizes {
+    &.s-btn-#{$size} {
+      min-width: inherit;
+      height: #{$value}px;
+      // line-height: #{$value}px;
+      padding: 0 #{calc($value / 4) + 6}px;
+
+      &.icon-s-btn {
+        min-width: inherit;
+        width: #{$value}px;
+        padding: 0;
+
+        &.icon-s-only {
+          min-width: #{$value}px;
+          border-color: rgba(255, 255, 255, 0);
+          background-color: rgba(255, 255, 255, 0);
+          align-items: center !important;
+          color: $font-400;
+
+          &:hover {
+            background-color: $background-200;
+          }
+
+          &.s-btn-disabled {
+            border-color: rgba(255, 255, 255, 0);
+            background-color: rgba(255, 255, 255, 0);
+            color: $font-400;
+          }
+        }
+      }
+    }
+  }
+
+  &.loading {
+    animation: loadingCircle 0.6s infinite linear;
+    margin-right: 8px;
+  }
+
+  &>svg~span {
+    margin-left: 4px;
+  }
+
+  $types: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'danger': $danger,
+    'warning': $warning,
+    'info': $info,
+  );
+
+@each $type,
+$value in $types {
+  &.s-btn-#{$type} {
+
+    &,
+    &.s-btn-disabled:hover {
+      @if $value ==map-get($theme, 'yellow') {
+        color: $font;
+      }
+
+      @else {
+        color: $white;
+      }
+
+      background-color: $value;
+      border-color: $value;
+    }
+
+    &:hover {
+      background-color: $primary-darken-10;
+      border-color: $primary-darken-10;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $primary-darken-10;
+      border-color: $primary-darken-10;
+      box-shadow: 0 0 0 3px $primary-lighten-10;
+    }
+  }
+
+  &.s-btn-outline-#{$type} {
+    & {
+      @if $value ==map-get($theme, 'yellow') {
+        color: $primary-darken-10;
+      }
+
+      @else {
+        color: $value;
+      }
+
+      border-color: $value;
+    }
+
+    &:hover {
+      @if $value ==map-get($theme, 'yellow') {
+        background-color: $primary-darken-10;
+      }
+
+      @else {
+        background-color: $primary-darken-10;
+      }
+
+      color: $white;
+      border-color: $primary-darken-10;
+    }
+
+    &.s-btn-disabled:hover {
+      color: $value;
+      border-color: $value;
+      background-color: $white;
+    }
+
+    &:active,
+    &:focus {
+      @if $value ==map-get($theme, 'yellow') {
+        background-color: $primary-darken-10;
+      }
+
+      @else {
+        background-color: $primary-darken-10;
+      }
+
+      border-color: $primary-darken-10;
+      box-shadow: 0 0 0 3px $primary-lighten-10;
+    }
+
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+&.s-btn-text {
+  color: $theme-blue-500;
+  text-decoration: underline;
+
+  // &.s-btn-disabled,
+  // &.s-btn-disabled:hover {
+  //   text-decoration: none;
+  // }
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+    color: $theme-blue;
+    outline: auto;
+  }
+}
+}

@@ -1,0 +1,50 @@
+:root {
+  --primary: #004cff;
+  --primary-lighten-10: #ccdbff;
+  --primary-lighten-40: #003dcc;
+  --primary-darken-10: #003dcc;
+  --secondary: #44668c;
+  --success: #008040;
+  --danger: #c82334;
+  --warning: #ffb300;
+  --info: #2a7ab0;
+}
+
+:root {
+  --blue: #004cff;
+  --indigo: #4e00ca;
+  --purple: #8600fb;
+  --pink: #d4146e;
+  --red: #c82334;
+  --orange: #f16407;
+  --yellow: #ffb300;
+  --green: #008040;
+  --teal: #20c997;
+  --cyan: #2a7ab0;
+  --dark: #121b25;
+}
+
+$primary: var(--primary);
+$primary-lighten-10: var(--primary-lighten-10);
+$primary-lighten-40: var(--primary-lighten-40);
+$primary-darken-10: var(--primary-darken-10);
+$secondary: var(--secondary);
+$success: var(--success);
+$danger: var(--danger);
+$warning: var(--warning);
+$info: var(--info);
+
+// theme color
+$theme: (
+  'blue': var(--primary),
+  'indigo': var(--indigo),
+  'purple': var(--purple),
+  'pink': var(--pink),
+  'red': var(--red),
+  'orange': var(--orange),
+  'yellow': var(--yellow),
+  'green': var(--green),
+  'teal': var(--teal),
+  'cyan': var(--cyan),
+  'dark': var(--dark)
+);

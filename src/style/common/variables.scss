@@ -1,0 +1,381 @@
+// theme
+$theme-blue: map-get($theme, 'blue') !default;
+$theme-indigo: map-get($theme, 'indigo') !default;
+$theme-purple: map-get($theme, 'purple') !default;
+$theme-pink: map-get($theme, 'pink') !default;
+$theme-red: map-get($theme, 'red') !default;
+$theme-orange: map-get($theme, 'orange') !default;
+$theme-yellow: map-get($theme, 'yellow') !default;
+$theme-green: map-get($theme, 'green') !default;
+$theme-teal: map-get($theme, 'teal') !default;
+$theme-cyan: map-get($theme, 'cyan') !default;
+
+$theme-blue-100: var(--primary-lighten-10) !default;
+$theme-blue-200: #99b7ff !default;
+$theme-blue-300: #6694ff !default;
+$theme-blue-400: var(--primary-lighten-40) !default; // in use
+$theme-blue-500: var(--primary-darken-10) !default; // in use
+$theme-blue-600: #002e99 !default;
+$theme-blue-700: #001e66 !default;
+$theme-blue-800: #000f33 !default;
+
+$theme-indigo-100: #bf97ff !default;
+$theme-indigo-200: #a064ff !default;
+$theme-indigo-300: #8131ff !default;
+$theme-indigo-400: #6200fd !default;
+$theme-indigo-500: #3a0097 !default;
+$theme-indigo-600: #270064 !default;
+$theme-indigo-700: #130031 !default;
+$theme-indigo-800: #000 !default;
+
+$theme-purple-100: #e5c8ff !default;
+$theme-purple-200: #ce95ff !default;
+$theme-purple-300: #b662ff !default;
+$theme-purple-400: #9e2fff !default;
+$theme-purple-500: #6b00c8 !default;
+$theme-purple-600: #500095 !default;
+$theme-purple-700: #340062 !default;
+$theme-purple-800: #19002f !default;
+
+$theme-pink-100: #f9bbd8 !default;
+$theme-pink-200: #f48dbd !default;
+$theme-pink-300: #f05ea2 !default;
+$theme-pink-400: #eb3088 !default;
+$theme-pink-500: #a51056 !default;
+$theme-pink-600: #770b3e !default;
+$theme-pink-700: #480725 !default;
+$theme-pink-800: #1a020d !default;
+
+$theme-red-100: #f4c3c8 !default;
+$theme-red-200: #ed97a0 !default;
+$theme-red-300: #e56c78 !default;
+$theme-red-400: #de4051 !default;
+$theme-red-500: #9d1b29 !default;
+$theme-red-600: #71141d !default;
+$theme-red-700: #460c12 !default;
+$theme-red-800: #1a0507 !default;
+
+$theme-orange-100: #fddcc7 !default;
+$theme-orange-200: #fcbe95 !default;
+$theme-orange-300: #faa064 !default;
+$theme-orange-400: #f98132 !default;
+$theme-orange-500: #bf4f06 !default;
+$theme-orange-600: #8e3b04 !default;
+$theme-orange-700: #5c2603 !default;
+$theme-orange-800: #2b1201 !default;
+
+$theme-yellow-100: #fff0cc !default;
+$theme-yellow-200: #ffe199 !default;
+$theme-yellow-300: #ffd166 !default;
+$theme-yellow-400: #ffc233 !default;
+$theme-yellow-500: #cc8f00 !default;
+$theme-yellow-600: #996b00 !default;
+$theme-yellow-700: #664800 !default;
+$theme-yellow-800: #332400 !default;
+
+$theme-green-100: #4dffa6 !default;
+$theme-green-200: #1aff8d !default;
+$theme-green-300: #00e673 !default;
+$theme-green-400: #00b35a !default;
+$theme-green-500: #004d27 !default;
+$theme-green-600: #001a0d !default;
+$theme-green-700: #000 !default;
+$theme-green-800: #000 !default;
+
+$theme-teal-100: #c0f5e5 !default;
+$theme-teal-200: #94eed3 !default;
+$theme-teal-300: #68e7c1 !default;
+$theme-teal-400: #3ce0af !default;
+$theme-teal-500: #199d76 !default;
+$theme-teal-600: #127155 !default;
+$theme-teal-700: #0b4534 !default;
+$theme-teal-800: #041913 !default;
+
+$theme-cyan-100: #b8d8ee !default;
+$theme-cyan-200: #8fc2e4 !default;
+$theme-cyan-300: #66abda !default;
+$theme-cyan-400: #3c95d1 !default;
+$theme-cyan-500: #205d87 !default;
+$theme-cyan-600: #16415e !default;
+$theme-cyan-700: #0d2434 !default;
+$theme-cyan-800: #03080b !default;
+
+// default colors
+$colors: (
+  'blue': #004cff,
+  'indigo': #4e00ca,
+  'purple': #8600fb,
+  'pink': #d4146e,
+  'red': #c82334,
+  'orange': #f16407,
+  'yellow': #ffb300,
+  'green': #008040,
+  'teal': #20c997,
+  'cyan': #2a7ab0,
+  'white': #fff,
+  'black': #000,
+  'font': #12171d,
+  'background': #1c2938,
+  'border': #abbbcb) !default;
+
+$blue: map-get($colors, 'blue') !default;
+$indigo: map-get($colors, 'indigo') !default;
+$purple: map-get($colors, 'purple') !default;
+$pink: map-get($colors, 'pink') !default;
+$red: map-get($colors, 'red') !default;
+$orange: map-get($colors, 'orange') !default;
+$yellow: map-get($colors, 'yellow') !default;
+$green: map-get($colors, 'green') !default;
+$teal: map-get($colors, 'teal') !default;
+$cyan: map-get($colors, 'cyan') !default;
+$white: map-get($colors, 'white') !default;
+$font: map-get($colors, 'font') !default;
+$background: map-get($colors, 'background') !default;
+$border: map-get($colors, 'border') !default;
+
+$info-colors: (
+  'primary': map-get($colors, 'blue'),
+  'secondary': map-get($colors, 'background'),
+  'success': map-get($colors, 'green'),
+  'danger': map-get($colors, 'red'),
+  'warning': map-get($colors, 'yellow'),
+  'info': map-get($colors, 'cyan'),
+  'light': lighten(map-get($colors, 'border'), 14%),
+  'dark': map-get($colors, 'black'),
+  'white': map-get($colors, 'white')
+);
+
+$light: lighten(map-get($colors, 'border'), 14%) !default;
+$dark: map-get($colors, 'black') !default;
+$white: map-get($colors, 'white') !default;
+
+$blue-100: #ccdbff !default;
+$blue-200: #99b7ff !default;
+$blue-300: #6694ff !default;
+$blue-400: #3370ff !default;
+$blue-500: #003dcc !default;
+$blue-600: #002e99 !default;
+$blue-700: #001e66 !default;
+$blue-800: #000f33 !default;
+
+$indigo-100: #bf97ff !default;
+$indigo-200: #a064ff !default;
+$indigo-300: #8131ff !default;
+$indigo-400: #6200fd !default;
+$indigo-500: #3a0097 !default;
+$indigo-600: #270064 !default;
+$indigo-700: #130031 !default;
+$indigo-800: #000 !default;
+
+$purple-100: #e5c8ff !default;
+$purple-200: #ce95ff !default;
+$purple-300: #b662ff !default;
+$purple-400: #9e2fff !default;
+$purple-500: #6b00c8 !default;
+$purple-600: #500095 !default;
+$purple-700: #340062 !default;
+$purple-800: #19002f !default;
+
+$pink-100: #f9bbd8 !default;
+$pink-200: #f48dbd !default;
+$pink-300: #f05ea2 !default;
+$pink-400: #eb3088 !default;
+$pink-500: #a51056 !default;
+$pink-600: #770b3e !default;
+$pink-700: #480725 !default;
+$pink-800: #1a020d !default;
+
+$red-100: #f4c3c8 !default;
+$red-200: #ed97a0 !default;
+$red-300: #e56c78 !default;
+$red-400: #de4051 !default;
+$red-500: #9d1b29 !default;
+$red-600: #71141d !default;
+$red-700: #460c12 !default;
+$red-800: #1a0507 !default;
+
+$orange-100: #fddcc7 !default;
+$orange-200: #fcbe95 !default;
+$orange-300: #faa064 !default;
+$orange-400: #f98132 !default;
+$orange-500: #bf4f06 !default;
+$orange-600: #8e3b04 !default;
+$orange-700: #5c2603 !default;
+$orange-800: #2b1201 !default;
+
+$yellow-100: #fff0cc !default;
+$yellow-200: #ffe199 !default;
+$yellow-300: #ffd166 !default;
+$yellow-400: #ffc233 !default;
+$yellow-500: #cc8f00 !default;
+$yellow-600: #996b00 !default;
+$yellow-700: #664800 !default;
+$yellow-800: #332400 !default;
+
+$green-100: #4dffa6 !default;
+$green-200: #1aff8d !default;
+$green-300: #00e673 !default;
+$green-400: #00b35a !default;
+$green-500: #004d27 !default;
+$green-600: #001a0d !default;
+$green-700: #000 !default;
+$green-800: #000 !default;
+
+$teal-100: #c0f5e5 !default;
+$teal-200: #94eed3 !default;
+$teal-300: #68e7c1 !default;
+$teal-400: #3ce0af !default;
+$teal-500: #199d76 !default;
+$teal-600: #127155 !default;
+$teal-700: #0b4534 !default;
+$teal-800: #041913 !default;
+
+$cyan-100: #b8d8ee !default;
+$cyan-200: #8fc2e4 !default;
+$cyan-300: #66abda !default;
+$cyan-400: #3c95d1 !default;
+$cyan-500: #205d87 !default;
+$cyan-600: #16415e !default;
+$cyan-700: #0d2434 !default;
+$cyan-800: #03080b !default;
+
+$font-100: #cdd6e0 !default;
+$font-200: #9eafc3 !default;
+$font-300: #6f88a6 !default;
+$font-400: #4d627b !default;
+$font-500: #2f3c4c !default;
+$font-600: $font  !default;
+
+$background-100: #f3f6f9 !default;
+$background-200: #ecf1f6 !default;
+$background-300: #e2e9f1 !default;
+$background-400: #d1dce8 !default;
+$background-500: #afc2d7 !default;
+$background-600: #8da7c6 !default;
+$background-700: #6b8db5 !default;
+$background-800: #6b8db5 !default;
+$background-900: #4f749e !default;
+$background-1000: #3e5b7c !default;
+$background-1100: #2d425a !default;
+$background-required: #fff9eb !default;
+
+$border-100: #edf1f4 !default;
+$border-200: #d7dfe6 !default;
+$border-300: #c1cdd9 !default;
+// Z-index
+// header 1002
+$zindex-sticky: 1000 !default;
+$zindex-fixed: 1010 !default;
+$zindex-modal-backdrop: 1020 !default;
+$zindex-modal: 1030 !default;
+$zindex-dropdown: 1040 !default;
+$zindex-popover: 1050 !default;
+$zindex-tooltip: 1060 !default;
+$zindex-drawer: 1020 !default;
+$zindex-loading: 1001 !default;
+// Spacing
+
+$spacers: (
+  '0': 0px,
+  '4': 4px,
+  '8': 8px,
+  '16': 16px,
+  '24': 24px,
+  '32': 32px,
+  '40': 40px,
+  '48': 48px,
+  '56': 56px,
+  '64': 64px,
+  '72': 72px) !default;
+
+// Font Size
+
+$font-size: (
+  '12': 12px,
+  '14': 14px,
+  '16': 16px,
+  '18': 18px,
+  '20': 20px,
+  '22': 22px,
+  '24': 24px,
+  '26': 26px,
+  '28': 28px,
+  '32': 32px,
+  '40': 40px,
+  '48': 48px,
+  '56': 56px,
+  '72': 72px) !default;
+
+// Size
+$sizes: (
+  'mini': 24,
+  'sm': 32,
+  'default': 40,
+  'lg': 48) !default;
+
+// shadows
+
+$pop-shadow: 0 6px 11px 0 rgba(30, 44, 61, 0.3) !default; // old
+
+$box-shadow-sm: 0 1px 4px 0 rgba(31, 45, 61, 0.15) !default;
+$box-shadow: 0 5px 10px 0 rgba(31, 45, 61, 0.15) !default;
+$box-shadow-lg: 0 10px 20px 0 rgba(31, 45, 61, 0.2) !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+$grid-row-columns: 6 !default;
+
+// Utilities
+
+$displays: none,
+  inline,
+  inline-block,
+  block,
+  table,
+  table-row,
+  table-cell,
+  flex,
+  inline-flex !default;
+$overflows: auto,
+  hidden !default;
+$positions: static,
+  relative,
+  absolute,
+  fixed,
+  sticky !default;
+
+// Printing
+
+$print-page-size: a3 !default;
+$print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
+
+// font weight
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
