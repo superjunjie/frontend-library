@@ -11,6 +11,7 @@
     "module": "esnext",
     // 决定如何处理模块。
     "moduleResolution": "node",
+    "noImplicitAny": false,
     // 启用所有严格类型检查选项。
     // 启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict，
     // --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
